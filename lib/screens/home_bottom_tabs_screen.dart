@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_meal/screens/screens.dart';
 
-class HomeTabsScreen extends StatefulWidget {
+class HomeBottomTabsScreen extends StatefulWidget {
   @override
-  _HomeTabsScreenState createState() => _HomeTabsScreenState();
+  _HomeBottomTabsScreenState createState() => _HomeBottomTabsScreenState();
 }
 
-class _HomeTabsScreenState extends State<HomeTabsScreen> {
+class _HomeBottomTabsScreenState extends State<HomeBottomTabsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,8 +16,12 @@ class _HomeTabsScreenState extends State<HomeTabsScreen> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Theme.of(context).primaryColor,
         items: [
-          BottomNavigationBarItem(),
-          BottomNavigationBarItem()
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category), label: 'Categories',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star,), label: 'Favorites'
+          )
         ]
       ),
     );

@@ -96,7 +96,16 @@ class CategoryMealDetailScreen extends StatelessWidget {
             _buildSteps(context, meal.steps),
           ],
         ),
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // if(Navigator.of(context).canPop()){ } // You can pass any value back to the route that triggered it.
+          // If you use pushReplace to get to this screen, you will not have any screen to go back to
+          // So running canPop() might be a good idea to be sure that the there is a screen to go back to
+          Navigator.of(context).pop(categoryId);
+        },
+        child: Icon(Icons.delete),
+      ),
     );
   }
 }

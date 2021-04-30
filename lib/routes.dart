@@ -7,4 +7,5 @@ final Map<String, WidgetBuilder> routes = {
   '/': (context) => HomeBottomTabsScreen(),
   CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
   CategoryMealDetailScreen.routeName: (context) => CategoryMealDetailScreen(),
+  CategoryFiltersScreen.routeName: (context) => CategoryFiltersScreen(),
 };

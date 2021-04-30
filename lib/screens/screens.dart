@@ -5,3 +5,4 @@ export 'categories_tab_screen.dart';
 export 'favorites_tab_screen.dart';
 export 'category_meals_screen.dart';
 export 'category_meal_detail_screen.dart';
+export 'category_filters_screen.dart';

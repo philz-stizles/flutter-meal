@@ -5,13 +5,20 @@ import 'package:flutter_meal/widgets/widgets.dart';
 
 class CategoryMealItem extends StatelessWidget {
   final Meal meal;
+  final Function removeMeal;
 
-  const CategoryMealItem({ @required this.meal, });
+  const CategoryMealItem({ @required this.meal, this.removeMeal, });
 
   void _navigateToMealDetailScreen(BuildContext context) {
     Navigator
       .of(context)
-      .pushNamed(CategoryMealDetailScreen.routeName, arguments: { 'id': meal.id });
+      .pushNamed(CategoryMealDetailScreen.routeName, arguments: { 'id': meal.id })
+      .then((value) {
+        if(value != null) {
+          print(value);
+          removeMeal(value);
+        }
+      });
   }
 
   Widget _buildCategoryMealFooter(BuildContext ctx) {

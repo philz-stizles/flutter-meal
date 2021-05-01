@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_meal/models/meal.dart';
 import 'package:flutter_meal/screens/screens.dart';
 import 'package:flutter_meal/widgets/widgets.dart';
 
 class HomeBottomTabsScreen extends StatefulWidget {
+  final List<Meal> favoriteMeals;
+
+  const HomeBottomTabsScreen({ this.favoriteMeals });
+
   @override
   _HomeBottomTabsScreenState createState() => _HomeBottomTabsScreenState();
 }

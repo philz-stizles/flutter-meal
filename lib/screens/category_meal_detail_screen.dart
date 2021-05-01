@@ -11,6 +11,10 @@ class CategoryMealDetailScreen extends StatelessWidget {
   //   @required this.id,
   //   @required this.title, 
   // });
+  // 
+  void _toggleFavorite() {
+
+  }
   
   Widget _buildImageHeader(BuildContext ctx, imageUrl) {
     return Container(
@@ -97,14 +101,24 @@ class CategoryMealDetailScreen extends StatelessWidget {
           ],
         ),
       ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     // if(Navigator.of(context).canPop()){ } // You can pass any value back to the route that triggered it.
+      //     // If you use pushReplace to get to this screen, you will not have any screen to go back to
+      //     // So running canPop() might be a good idea to be sure that the there is a screen to go back to
+      //     Navigator.of(context).pop(categoryId);
+      //   },
+      //   child: Icon(Icons.delete),
+      // ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // if(Navigator.of(context).canPop()){ } // You can pass any value back to the route that triggered it.
           // If you use pushReplace to get to this screen, you will not have any screen to go back to
           // So running canPop() might be a good idea to be sure that the there is a screen to go back to
-          Navigator.of(context).pop(categoryId);
+          // Navigator.of(context).pop(categoryId);
+          _toggleFavorite();
         },
-        child: Icon(Icons.delete),
+        child: Icon(Icons.star),
       ),
     );
   }
